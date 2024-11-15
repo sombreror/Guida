@@ -1,9 +1,31 @@
 :root {
-    --bg-color: #212121;
+    --bg-color: #181818;
+    --bg-color-2: #1f1f1f;
     --txt-color: #fff;
+    --grid-gap: 10px;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--txt-color);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,50%));
+}
+
+.div {
+    background-color: var(--bg-color-2);
+    margin: var(--grid-gap);
+    padding: 10px 20px 20px 20px;
+    border-radius: 20px;
+}
+
+.guide {
+    transition: ease .1s;
+}
+
+.guide:hover{
+    transform: scale(105%);
 }
