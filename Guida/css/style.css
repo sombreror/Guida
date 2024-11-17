@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --bg-color: #181818;
     --bg-color-2: #1f1f1f;
     --txt-color: #fff;
@@ -55,4 +55,108 @@ body {
 
 .linux:hover {
     box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 125, 0.25);
+} */
+
+:root {
+    --bg-color: #181818;
+    --bg-color-2: #1f1f1f;
+    --bg-color-3: #2a2a2a;
+    --txt-color: #fff;
+    --border-radius: 25px;
+    --card-gap: 10px;
+    --card-padding: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+}
+
+.main {
+    display: flex;
+}
+
+.guides {
+    display: flex;
+    border: 1px solid red;
+}
+
+.requisites {
+    min-width: 200px;
+    height: 200px;
+}
+
+.div:not(.guide) {
+    background-color: var(--bg-color-2);
+    margin: var(--card-gap);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.head {
+    display: flex;
+    border: 1px solid blue;
+}
+
+.head>h1 {
+    width: fit-content;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--bg-color-2);
+    margin: 10px 0 0 10px;
+}
+
+.head>ul {
+    background-color: var(--bg-color-3);
+    width: 100%;
+    height: 45px;
+    border: var(--card-gap) solid var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: -30px 30px 0 var(--bg-color-2);
+    z-index: -1;
+    text-align: center;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 45px;
+    font-size: large;
+    font-weight: 800;
+}
+
+.head>ul>li {
+    transform: translateY(0px);
+    animation: textlist 10s cubic-bezier(0, 1, 1, 0) infinite;
+}
+
+@keyframes textlist {
+    0% {
+        transform: translateY(22.5px);
+    }
+
+    25% {
+        transform: translateY(-22.5px);
+    }
+
+    50% {
+        transform: translateY(-67.5px);
+    }
+
+    75% {
+        transform: translateY(-112.5px);
+    }
+
+    100% {
+        transform: translateY(-157.5px);
+    }
+}
+
+.guide>p {
+    width: fit-content;
+    height: 300px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+    padding: 20px;
+    background-color: var(--bg-color-2);
+    margin: 0 10px 10px 10px;
 }
