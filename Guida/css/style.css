@@ -74,23 +74,49 @@ body {
 
 .main {
     display: flex;
+    flex-direction: column;
 }
 
 .guides {
     display: flex;
 }
 
-.requisites {
-    min-width: 200px;
-    height: 200px;
+.main>div:not(.requisites) {
+    display: flex;
 }
 
-.div:not(.guide) {
+.main>div>img {
     background-color: var(--bg-color-2);
     margin: var(--card-gap);
     padding: var(--card-padding);
     border-radius: var(--border-radius);
-    overflow: hidden;
+    height: 200px;
+    aspect-ratio: 1/1;
+}
+
+.main>div>div {
+    background-color: var(--bg-color-2);
+    margin: var(--card-gap);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+}
+
+.requisites>h2 {
+    margin-left: var(--card-padding);
+}
+
+.requisites>ul {
+    display: flex;
+    padding: 0;
+    height: calc(var(--card-padding) * 2px);
+    list-style: none;
+}
+
+.requisites>ul>li {
+    background-color: var(--bg-color-2);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    margin-left: var(--card-gap);
 }
 
 .head {
