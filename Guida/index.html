@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div class="main">
-        <div>
+    <div class="flex-col mrg">
+        <div class="flex card">
             <div>
                 <h1>Guida per installare un sistema operativo passo per passo con una chiavetta USB</h1>
                 <p>Per installare Windows da zero tramite una chiavetta USB, dovrai seguire alcuni passaggi
@@ -20,34 +20,36 @@
                     di installazione e l'installazione effettiva del sistema operativo sul tuo computer.
                 </p>
             </div>
-            <img src="./main.jpeg" alt="main image">
+            <img src="./images/main.jpeg" alt="main image" class="main-img">
         </div>
         <div class="requisites">
             <h2>Requisiti</h2>
-            <ul>
+            <ul class="lift card">
                 <li>Chiavetta USB da almeno 8 GB</li>
                 <li>Un computer funzionante per preparare la chiavetta USB</li>
             </ul>
         </div>
     </div>
-    <div class="guides">
-        <div class="guide windows">
-            <div class="head">
-                <h1>WINDOWS</h1>
-                <ul>
-                    <li>11</li>
-                    <li>10</li>
-                    <li>8</li>
-                    <li>7</li>
-                    <li>11</li>
-                </ul>
+    <div class="flex scale">
+        <a href="./pages/windows.html">
+            <div class="windows mrg">
+                <div class="guide-head flex">
+                    <h1>WINDOWS</h1>
+                    <ul>
+                        <li>11</li>
+                        <li>10</li>
+                        <li>8</li>
+                        <li>7</li>
+                        <li>11</li>
+                    </ul>
+                </div>
+                <p class="guide-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda necessitatibus voluptatum
+                    voluptatibus! Sunt ab aliquam fugit, autem reprehenderit repudiandae obcaecati minima molestiae
+                    molestias, architecto eius deleniti, corrupti porro ipsa? Natus.</p>
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda necessitatibus voluptatum
-                voluptatibus! Sunt ab aliquam fugit, autem reprehenderit repudiandae obcaecati minima molestiae
-                molestias, architecto eius deleniti, corrupti porro ipsa? Natus.</p>
-        </div>
-        <div class="guide linux">
-            <div class="head">
+        </a>
+        <div class="linux mrg">
+            <div class="guide-head flex">
                 <h1>LINUX</h1>
                 <ul>
                     <li>Ubuntu</li>
@@ -57,7 +59,7 @@
                     <li>Ubuntu</li>
                 </ul>
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda necessitatibus voluptatum
+            <p class="guide-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda necessitatibus voluptatum
                 voluptatibus! Sunt ab aliquam fugit, autem reprehenderit repudiandae obcaecati minima molestiae
                 molestias, architecto eius deleniti, corrupti porro ipsa? Natus.</p>
         </div>

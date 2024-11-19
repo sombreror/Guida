@@ -1,0 +1,20 @@
+.note {
+    background-color: #8c8c8cd0;
+    border-left: 7px solid #535353d0;
+    margin: 20px 20px 20px 60px;
+    padding: 20px;
+}
+
+.how {
+    background-color: #a5ac29d0;
+    border-left: 7px solid #f5ff36d0;
+    margin: 20px 20px 20px 60px;
+    padding: 20px;
+}
+
+.warn {
+    background-color: #b33232d0;
+    border-left: 7px solid #ff2323d0;
+    margin: 20px 20px 20px 60px;
+    padding: 20px;
+}

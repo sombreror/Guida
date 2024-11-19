@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <title>Windows</title>
+</head>
+
+<body>
+    <h1>Guida per installare Windows passo per passo con una chiavetta USB</h1>
+
+    <h2>Indice</h2>
+    <ul>
+        <li>Scaricare l'immagine ISO[?]</li>
+        <li>Configurazione della chiavetta</li>
+        <li>Configurazione del Boot Order[?] nel BIOS/UEFI[?]</li>
+        <li>Installazione di Windows</li>
+    </ul>
+
+    <h1>Passo 1 - Scaricare l'immagine ISO di Windows</h1>
+    <p>
+        Visita il sito ufficiale di Microsoft: Download di Windows
+
+        Scegli la versione di Windows che desideri installare.
+
+        Microsoft offre due opzioni: con supporto e senza supporto:
+        
+        <div class="note">
+            In questa guida seguiremo il procedimento per l'opzione senza supporto, se scegli l'altra il procedimento è molto simile.
+        </div>
+
+        Se hai scelto l'opzione senza supporto, apri il menu a tendina Seleziona Download e scegli un opzione.
+
+        Dopo aver premuto su Scarica ora, seleziona la lingua desiderata e clicca su Conferma: appariranno delle opzioni
+        per scaricare la ISO[?] per processori a 32 o a 64 bit.
+
+        <div class="note">
+            La scelta varia in base alle specifiche del computer su cui installare il sistema operativo.
+        </div>
+        <div class="how">
+            come scegliere?
+        </div>
+
+        Una volta scelta l'opzione, il download si avvierà.
+    </p>
+
+    <h1>Passo 2 - Configurazione della chiavetta</h1>
+    <p>
+        Dopo aver scaricato il file ISO, è necessario preparare una chiavetta USB avviabile. Per farlo, useremo un
+        programma come Rufus, scaricabile qui: Download di Rufus. Esistono anche altre alternative come Etcher e Ventoy.
+
+        Una volta scaricato, apri Rufus e seleziona la chiavetta USB dall'elenco dei dispositivi:
+
+        <div class="note">
+            Rufus dovrebbe rilevare la chiavetta automaticamente, se non vedi il dispositivo assicurati di aver |
+            inserito correttamente la chiavetta e che sia funzionante.
+        </div>
+
+        Nella sezione Boot selection seleziona Disk or ISO image e clicca su Select per scegliere il file ISO appena
+        scaricato.
+
+        Imposta poi l'opzione Image option su Standard Windows Installation.
+
+        Nella sezione Partition scheme scegli MBR o GPT.
+
+        <div class="how">
+            come scegliere?
+        </div>
+
+        Rufus modificherà automaticamente il nome della chiavetta, ma puoi cambiarlo nella sezione Volume label.
+
+        Una volta finito, puoi premere su START.
+
+        Rufus aprirà una finestra dove puoi scegliere varie opzioni per personalizzare l'installazione, consigliamo di
+        non cambiare niente e premere OK.
+
+        <div class="warn">
+            TUTTI I DATI SULLA CHIAVETTA VERRANNO CANCELLATI Se accetti, Rufus cancellerà tutto il contenuto dell'USB
+        </div>
+
+        Andando avanti, Rufus inizierà a scaricare l'ISO nell'USB: questo processo richiede qualche minuto.
+
+        Quando Rufus ha finito puoi staccare la chiavetta: ora è diventata un dispositivo avviabile.
+    </p>
+
+    <h1>Passo 3 - Configurazione del boot order[?]</h1>
+    <p>
+        Ora che hai una chiavetta avviabile, la puoi inserire nel computer su cui vuoi installare Windows.
+
+        Dopo averla inserita bisogna cambiare l'ordine di avvio, in modo che il computer carichi il sistema operativo
+        dalla chiavetta e non dall'hard disk. Per fare ciò, riavvia il computer: durante il riavvio, premi il tasto per
+        accedere al menù di Boot finché non ti appare una lista di dispositivi.
+
+        <div class="note">
+            Di solito il tasto per accedere al menù di Boot è F11 o F8, se non sei sicuro guarda se nella schermata di
+            avvio c'è scritto o consulta il manuale del tuo computer
+        </div>
+
+        Nella lista seleziona la chiavetta USB, il pc dovrebbe riavviarsi.
+    </p>
+
+    <h1>Passo 4 - Installazione di Windows</h1>
+    <p>
+        Dopo il riavvio, il computer dovrebbe visualizzare la schermata di installazione di Windows.
+
+        Per finire l'installazione:
+
+        Seleziona la lingua, l'orario e il layout della tastiera
+        Clicca su Installa e accetta la licenza (dopo averla letta tutta, mi raccomando)
+
+        Vedrai l'elenco dei dischi rigidi e delle partizioni. Se stai installando Windows da zero, puoi scegliere di
+        eliminare le partizioni esistenti sul disco
+
+        <div class="warn">
+            TUTTI I DATI SUL DISCO ANDRANNO PERSI
+        </div>
+        <div class="note">
+            Se il disco è nuovo e non ha partizioni, Windows creerà automaticamente le partizioni necessarie
+        </div>
+
+        Scegli il disco su cui desideri installare Windows e clicca su Avanti.
+
+        Windows inizierà a copiare i file sul disco e a configurare il sistema. Questo processo richiede del tempo e il
+        computer si ravvierà più volte.
+
+        <div class="warn">
+            Non staccare la chiavetta USB fino a quando non viene completata l'installazione.
+        </div>
+
+        Una volta che Windows è installato, rimangono gli ultimi passaggi per configurare il sistema:
+
+        Imposta la lingua e la regione (se non l'hai fatto prima)
+        Collegati a una rete Wi-Fi
+        Se vuoi, puoi accedere con l'account Microsoft o creare un account locale
+        Imposta le preferenze di privacy e personalizzazione
+
+        Una volta che l'installazione è completa e hai configurato Windows, rimuovi la chiavetta USB.
+    </p>
+
+    <p>
+        Se tutto è andato correttamente, il computer si avvierà direttamente su Windows, senza la necessità di inserire
+        nuovamente la chiavetta USB.
+    </p>
+
+</body>
+
+</html>
